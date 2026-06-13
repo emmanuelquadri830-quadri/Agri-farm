@@ -5,8 +5,8 @@ import { CheckCircle } from 'lucide-react';
 
 export default function Features() {
   return (
-    <section id="features" style={{ background: '#f5f5f5', padding: '80px 32px' }}>
-      <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+    <section id="features" style={{ background: '#f5f5f5', padding: '80px 60px' }}>
+      <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
 
         {/* Header */}
         <motion.div

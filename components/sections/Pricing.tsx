@@ -38,7 +38,7 @@ const plans = [
 
 export default function Pricing() {
   return (
-    <section id="pricing" style={{ background: '#ffffff', padding: '96px 32px' }}>
+    <section id="pricing" style={{ background: '#ffffff', padding: '96px 60px' }}>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -63,7 +63,7 @@ export default function Pricing() {
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
         gap: '24px',
-        maxWidth: '1000px',
+        maxWidth: '1200px',
         margin: '0 auto',
         alignItems: 'stretch',
       }}>

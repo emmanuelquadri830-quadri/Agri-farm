@@ -27,7 +27,7 @@ export default function ImpactNumbers() {
   return (
     <section style={{
       background: 'linear-gradient(to bottom, #ffffff 0%, #eef1f7 18%, #f4f6fb 60%, #e8ecf5 100%)',
-      padding: '0 5% 72px 5%',
+      padding: '0 60px 72px 60px',
     }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
         <div style={{

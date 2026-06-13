@@ -78,7 +78,7 @@ export default function Footer() {
         {/* Content */}
         <div style={{
           position: 'relative', zIndex: 1,
-          maxWidth: '1400px', margin: '0 auto',
+          maxWidth: '1200px', margin: '0 auto',
           padding: '96px 60px',
           width: '100%',
           display: 'flex',
@@ -151,7 +151,7 @@ export default function Footer() {
           borderBottom: '1px solid rgba(255,255,255,0.07)',
         }}>
           <div style={{
-            maxWidth: '1400px', margin: '0 auto',
+            maxWidth: '1200px', margin: '0 auto',
             padding: '56px 60px',
             display: 'flex', alignItems: 'center',
             justifyContent: 'space-between', gap: '32px',
@@ -212,7 +212,7 @@ export default function Footer() {
 
         {/* Main links area */}
         <div style={{
-          maxWidth: '1400px', margin: '0 auto',
+          maxWidth: '1200px', margin: '0 auto',
           padding: '64px 60px 48px',
           display: 'grid',
           gridTemplateColumns: '280px 1fr',
@@ -292,7 +292,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div style={{
-          maxWidth: '1400px', margin: '0 auto',
+          maxWidth: '1200px', margin: '0 auto',
           padding: '20px 60px 40px',
           borderTop: '1px solid rgba(255,255,255,0.07)',
           display: 'flex',
