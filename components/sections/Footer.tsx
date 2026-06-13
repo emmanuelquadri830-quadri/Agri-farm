@@ -71,8 +71,8 @@ export default function Footer() {
         {/* Content */}
         <div style={{
           position: 'relative', zIndex: 1,
-          maxWidth: '1200px', margin: '0 auto',
-          padding: '96px 80px',
+          maxWidth: '1400px', margin: '0 auto',
+          padding: '96px 60px',
           width: '100%',
           display: 'flex',
           flexDirection: 'row',
@@ -96,14 +96,14 @@ export default function Footer() {
               lineHeight: '1.15',
               letterSpacing: '-0.03em',
               fontFamily: 'Inter, sans-serif',
-              maxWidth: '520px',
+              maxWidth: '620px',
             }}>
               Drive predictable outcomes across your agri-food operations
             </h2>
           </div>
 
           {/* Right */}
-          <div style={{ maxWidth: '400px', display: 'flex', flexDirection: 'column', gap: '20px' }}>
+          <div style={{ maxWidth: '480px', display: 'flex', flexDirection: 'column', gap: '20px' }}>
             <p style={{
               fontSize: '16px', color: 'rgba(255,255,255,0.7)',
               lineHeight: '1.75', fontFamily: 'Inter, sans-serif',
@@ -144,8 +144,8 @@ export default function Footer() {
           borderBottom: '1px solid rgba(255,255,255,0.07)',
         }}>
           <div style={{
-            maxWidth: '1200px', margin: '0 auto',
-            padding: '56px 80px',
+            maxWidth: '1400px', margin: '0 auto',
+            padding: '56px 60px',
             display: 'flex', alignItems: 'center',
             justifyContent: 'space-between', gap: '32px',
             flexWrap: 'wrap',
@@ -205,8 +205,8 @@ export default function Footer() {
 
         {/* Main links area */}
         <div style={{
-          maxWidth: '1200px', margin: '0 auto',
-          padding: '64px 80px 48px',
+          maxWidth: '1400px', margin: '0 auto',
+          padding: '64px 60px 48px',
           display: 'grid',
           gridTemplateColumns: '280px 1fr',
           gap: '80px',
@@ -285,8 +285,8 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div style={{
-          maxWidth: '1200px', margin: '0 auto',
-          padding: '20px 80px 40px',
+          maxWidth: '1400px', margin: '0 auto',
+          padding: '20px 60px 40px',
           borderTop: '1px solid rgba(255,255,255,0.07)',
           display: 'flex',
           justifyContent: 'space-between',
