@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Zap } from "lucide-react";
 import DashboardPreview from "@/components/DashboardPreview";
 
 const WORDS = ['Operations', 'Workflows', 'Automation', 'Productivity'];
@@ -79,14 +78,6 @@ export default function HeroSection() {
       }}>
         {/* Logo */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <div style={{
-            width: '28px', height: '28px',
-            background: '#16a34a',
-            borderRadius: '8px',
-            display: 'flex', alignItems: 'center', justifyContent: 'center',
-          }}>
-            <span style={{ fontSize: '14px', fontWeight: '800', color: 'white' }}>A</span>
-          </div>
           <span style={{
             fontSize: '16px',
             fontWeight: '900',
@@ -185,18 +176,6 @@ export default function HeroSection() {
           }}>
             Automate{' '}
             <span style={{ color: FOREST_GREEN }}>Smart</span>
-            {' '}
-            <span style={{
-              display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-              width: '36px', height: '36px',
-              background: 'linear-gradient(135deg, #22c55e, #15803d)',
-              borderRadius: '10px',
-              verticalAlign: 'middle',
-              margin: '0 4px',
-              boxShadow: '0 4px 14px rgba(21,128,61,0.4)',
-            }}>
-              <Zap size={18} color="white" fill="white" />
-            </span>
             {' '}Workflows
           </span>
 
