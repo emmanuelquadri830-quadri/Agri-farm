@@ -35,7 +35,7 @@ export default function WhyNexora() {
         }
       `}</style>
 
-      <div style={{ maxWidth: '90%', margin: '0 auto', position: 'relative' }}>
+      <div style={{ maxWidth: '90%', margin: '0 auto', position: 'relative', zIndex: 20 }}>
 
         {/* ── Card 1: cream ── */}
         <motion.div
