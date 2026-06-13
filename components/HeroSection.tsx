@@ -60,64 +60,93 @@ export default function HeroSection() {
       {/* Navbar */}
       <nav style={{
         position: 'fixed',
-        top: '16px',
-        left: '24px',
-        right: '24px',
+        top: '14px',
+        left: '50%',
+        transform: 'translateX(-50%)',
+        width: 'calc(100% - 80px)',
+        maxWidth: '1200px',
         zIndex: 50,
-        height: '60px',
+        height: '58px',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        padding: '0 24px',
-        background: 'rgba(220, 252, 231, 0.45)',
-        backdropFilter: 'blur(20px) saturate(180%)',
-        WebkitBackdropFilter: 'blur(20px) saturate(180%)',
-        borderRadius: '14px',
-        border: '1px solid rgba(134,239,172,0.3)',
-        boxShadow: '0 1px 40px rgba(34,197,94,0.06)',
+        padding: '0 28px',
+        background: 'rgba(255,255,255,0.72)',
+        backdropFilter: 'blur(24px) saturate(200%)',
+        WebkitBackdropFilter: 'blur(24px) saturate(200%)',
+        borderRadius: '16px',
+        border: '1px solid rgba(255,255,255,0.55)',
+        boxShadow: '0 2px 24px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.04)',
       }}>
         {/* Logo */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexShrink: 0 }}>
+          {/* Leaf icon mark */}
+          <div style={{
+            width: '30px', height: '30px',
+            background: 'linear-gradient(135deg, #22c55e, #15803d)',
+            borderRadius: '8px',
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            boxShadow: '0 2px 8px rgba(21,128,61,0.3)',
+          }}>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 22c0-7.732-6-11-6-11s6-3.268 6-11c0 7.732 6 11 6 11s-6 3.268-6 11z"/>
+            </svg>
+          </div>
           <span style={{
-            fontSize: '16px',
-            fontWeight: '900',
+            fontSize: '15px',
+            fontWeight: '800',
             color: '#0f172a',
-            letterSpacing: '0.02em',
+            letterSpacing: '0.06em',
             fontFamily: 'Inter, sans-serif',
           }}>AGRI-FARM</span>
         </div>
 
         {/* Center links */}
         <div style={{
-          display: 'flex', gap: '36px', alignItems: 'center',
+          display: 'flex', gap: '4px', alignItems: 'center',
           position: 'absolute', left: '50%', transform: 'translateX(-50%)',
+          background: 'rgba(0,0,0,0.04)',
+          borderRadius: '999px',
+          padding: '4px',
         }}>
-          {['Home', 'Features', 'Pricing', 'Reviews'].map(link => (
-            <a key={link} href="#" style={{
-              fontSize: '14px',
-              color: '#374151',
+          {[
+            { label: 'Home',     active: true },
+            { label: 'Features', active: false },
+            { label: 'Pricing',  active: false },
+            { label: 'About',    active: false },
+          ].map(({ label, active }) => (
+            <a key={label} href="#" style={{
+              fontSize: '13.5px',
+              color: active ? '#15803d' : '#4b5563',
               textDecoration: 'none',
               fontFamily: 'Inter, sans-serif',
-              fontWeight: '500',
+              fontWeight: active ? '600' : '500',
+              padding: '6px 16px',
+              borderRadius: '999px',
+              background: active ? 'white' : 'transparent',
+              boxShadow: active ? '0 1px 4px rgba(0,0,0,0.08)' : 'none',
               letterSpacing: '0.01em',
-              transition: 'color 0.2s',
-            }}>{link}</a>
+              transition: 'all 0.15s ease',
+            }}>{label}</a>
           ))}
         </div>
 
         {/* Right */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexShrink: 0 }}>
           <a href="#" style={{
-            fontSize: '13px',
-            color: '#374151',
+            fontSize: '13.5px',
+            color: '#4b5563',
             textDecoration: 'none',
             fontFamily: 'Inter, sans-serif',
             fontWeight: '500',
+            padding: '7px 16px',
+            borderRadius: '999px',
+            transition: 'background 0.15s',
           }}>Sign in</a>
           <button style={{
-            background: '#16a34a',
+            background: 'linear-gradient(135deg, #22c55e, #15803d)',
             color: 'white',
-            fontSize: '13px',
+            fontSize: '13.5px',
             fontWeight: '600',
             padding: '8px 20px',
             borderRadius: '999px',
@@ -125,6 +154,7 @@ export default function HeroSection() {
             cursor: 'pointer',
             fontFamily: 'Inter, sans-serif',
             letterSpacing: '-0.01em',
+            boxShadow: '0 2px 10px rgba(21,128,61,0.35)',
           }}>Get Started</button>
         </div>
       </nav>
