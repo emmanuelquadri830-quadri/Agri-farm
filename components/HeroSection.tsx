@@ -85,15 +85,15 @@ export default function HeroSection() {
             borderRadius: '8px',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
           }}>
-            <span style={{ fontSize: '14px', fontWeight: '800', color: 'white' }}>N</span>
+            <span style={{ fontSize: '14px', fontWeight: '800', color: 'white' }}>A</span>
           </div>
           <span style={{
             fontSize: '16px',
-            fontWeight: '700',
+            fontWeight: '900',
             color: '#0f172a',
-            letterSpacing: '-0.02em',
+            letterSpacing: '0.02em',
             fontFamily: 'Inter, sans-serif',
-          }}>Nexora</span>
+          }}>AGRI-FARM</span>
         </div>
 
         {/* Center links */}

@@ -32,11 +32,11 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div style={{
-              fontSize: '16px', fontWeight: '700', color: '#111827',
-              fontFamily: 'Inter, sans-serif', letterSpacing: '-0.02em',
+              fontSize: '16px', fontWeight: '900', color: '#111827',
+              fontFamily: 'Inter, sans-serif', letterSpacing: '0.02em',
               marginBottom: '8px',
             }}>
-              Nexora
+              AGRI-FARM
             </div>
             <p style={{
               fontSize: '13px', color: '#9ca3af',
@@ -90,7 +90,7 @@ export default function Footer() {
           gap: '8px',
         }}>
           <span style={{ fontSize: '12px', color: '#9ca3af', fontFamily: 'Inter, sans-serif' }}>
-            © 2026 Nexora, Inc.
+            © 2026 AGRI-FARM, Inc.
           </span>
           <span style={{ fontSize: '12px', color: '#9ca3af', fontFamily: 'Inter, sans-serif' }}>
             SOC II · 256-bit Encryption · 24/5 Support

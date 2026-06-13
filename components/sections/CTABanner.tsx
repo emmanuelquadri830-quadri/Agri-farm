@@ -65,7 +65,7 @@ export default function CTABanner() {
             maxWidth: '440px', margin: '0 auto 40px', lineHeight: '1.7',
           }}
         >
-          Join 100,000+ teams already using Nexora to move faster and do more with less.
+          Join 100,000+ teams already using AGRI-FARM to move faster and do more with less.
         </motion.p>
 
         <motion.button
