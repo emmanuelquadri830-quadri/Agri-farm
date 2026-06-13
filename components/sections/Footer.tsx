@@ -94,7 +94,7 @@ export default function Footer() {
               textTransform: 'uppercase', color: '#4ade80',
               fontFamily: 'Inter, sans-serif', marginBottom: '20px',
             }}>
-              AI-Powered Agriculture
+              Built for farmers
             </p>
             <h2 style={{
               fontSize: 'clamp(2rem, 3.5vw, 3rem)',
@@ -105,7 +105,7 @@ export default function Footer() {
               fontFamily: 'Inter, sans-serif',
               maxWidth: '620px',
             }}>
-              Drive predictable outcomes across your agri-food operations
+              Your land is the asset. Let's keep it working.
             </h2>
           </div>
 
@@ -115,8 +115,8 @@ export default function Footer() {
               fontSize: '16px', color: 'rgba(255,255,255,0.7)',
               lineHeight: '1.75', fontFamily: 'Inter, sans-serif',
             }}>
-              Transform your farming operations with AGRI-FARM's AI-powered platform.
-              Reach out today to accelerate growth and boost yields with data-driven insights.
+              AGRI-FARM brings together field data, weather patterns, and market signals —
+              so every decision you make is backed by something real, not a guess.
             </p>
             <div style={{ display: 'flex', gap: '12px', alignItems: 'center', flexWrap: 'wrap' }}>
               <button style={{
