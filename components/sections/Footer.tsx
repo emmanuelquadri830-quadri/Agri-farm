@@ -61,7 +61,14 @@ export default function Footer() {
           backgroundPosition: 'center',
         }}
       >
-        {/* Overlay */}
+        {/* Top fade from white */}
+        <div style={{
+          position: 'absolute', top: 0, left: 0, right: 0,
+          height: '220px', zIndex: 1,
+          background: 'linear-gradient(to bottom, #ffffff 0%, rgba(255,255,255,0.0) 100%)',
+          pointerEvents: 'none',
+        }} />
+        {/* Bottom fade to footer */}
         <div style={{
           position: 'absolute', inset: 0, zIndex: 0,
           background: 'linear-gradient(to bottom, rgba(10,40,20,0.05) 0%, rgba(10,40,20,0.25) 55%, rgba(7,21,16,0.85) 80%, #071510 100%)',
