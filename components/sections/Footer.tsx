@@ -46,120 +46,272 @@ export default function Footer() {
 
   return (
     <>
-      {/* ── CTA SECTION ── */}
+      {/* ════════════════════════════
+          CTA SECTION
+      ════════════════════════════ */}
       <section
-        className="relative overflow-hidden"
         style={{
-          minHeight: '480px',
+          position: 'relative',
+          overflow: 'hidden',
+          minHeight: '520px',
+          display: 'flex',
+          alignItems: 'center',
           backgroundImage: 'url(https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1600&q=80)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       >
-        {/* Dark overlay */}
-        <div className="absolute inset-0 z-0" style={{ background: 'rgba(13,40,24,0.80)' }} />
+        {/* Overlay */}
+        <div style={{
+          position: 'absolute', inset: 0, zIndex: 0,
+          background: 'rgba(10,30,18,0.82)',
+          pointerEvents: 'none',
+        }} />
 
         {/* Content */}
-        <div className="relative z-10 max-w-6xl mx-auto px-16 py-24 flex flex-row items-center justify-between gap-16">
-          {/* Left */}
-          <div className="flex-1">
-            <h2 className="font-bold text-5xl leading-tight text-white max-w-lg">
+        <div style={{
+          position: 'relative', zIndex: 1,
+          maxWidth: '1200px', margin: '0 auto',
+          padding: '96px 80px',
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'row',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          gap: '80px',
+        }}>
+          {/* Left heading */}
+          <div style={{ flex: 1 }}>
+            <p style={{
+              fontSize: '13px', fontWeight: '600', letterSpacing: '0.12em',
+              textTransform: 'uppercase', color: '#4ade80',
+              fontFamily: 'Inter, sans-serif', marginBottom: '20px',
+            }}>
+              AI-Powered Agriculture
+            </p>
+            <h2 style={{
+              fontSize: 'clamp(2rem, 3.5vw, 3rem)',
+              fontWeight: '800',
+              color: '#ffffff',
+              lineHeight: '1.15',
+              letterSpacing: '-0.03em',
+              fontFamily: 'Inter, sans-serif',
+              maxWidth: '520px',
+            }}>
               Drive predictable outcomes across your agri-food operations
             </h2>
           </div>
 
           {/* Right */}
-          <div className="flex flex-col gap-5" style={{ maxWidth: '380px' }}>
-            <p className="text-white/80 text-base leading-relaxed">
+          <div style={{ maxWidth: '400px', display: 'flex', flexDirection: 'column', gap: '20px' }}>
+            <p style={{
+              fontSize: '16px', color: 'rgba(255,255,255,0.7)',
+              lineHeight: '1.75', fontFamily: 'Inter, sans-serif',
+            }}>
               Transform your farming operations with AGRI-FARM's AI-powered platform.
               Reach out today to accelerate growth and boost yields with data-driven insights.
             </p>
-            <div>
-              <button className="border border-[#22c55e] text-white hover:bg-[#22c55e] rounded-full px-7 py-3 text-sm font-semibold w-fit transition-all duration-200">
+            <div style={{ display: 'flex', gap: '12px', alignItems: 'center', flexWrap: 'wrap' }}>
+              <button style={{
+                background: '#22c55e', color: 'white',
+                fontSize: '14px', fontWeight: '600',
+                padding: '14px 32px', borderRadius: '999px',
+                border: 'none', cursor: 'pointer',
+                fontFamily: 'Inter, sans-serif',
+                letterSpacing: '-0.01em',
+              }}>
                 Schedule a demo →
               </button>
+              <a href="#" style={{
+                fontSize: '14px', color: 'rgba(255,255,255,0.55)',
+                fontFamily: 'Inter, sans-serif', textDecoration: 'none',
+                fontWeight: '500',
+              }}>
+                Learn more
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── FOOTER SECTION ── */}
-      <footer style={{ backgroundColor: '#0a1f12', width: '100%' }}>
-        <div className="px-16 pt-14 pb-8">
+      {/* ════════════════════════════
+          FOOTER
+      ════════════════════════════ */}
+      <footer style={{ backgroundColor: '#071510', width: '100%' }}>
 
-          {/* Newsletter row */}
-          <div className="flex flex-row items-center justify-between gap-6 pb-12 border-b border-white/10">
-            <span className="text-white text-3xl font-semibold">
-              Join Our <span className="text-[#22c55e]">Newsletter</span>
-            </span>
-            <div className="flex items-center gap-3">
+        {/* Newsletter band */}
+        <div style={{
+          borderBottom: '1px solid rgba(255,255,255,0.07)',
+        }}>
+          <div style={{
+            maxWidth: '1200px', margin: '0 auto',
+            padding: '56px 80px',
+            display: 'flex', alignItems: 'center',
+            justifyContent: 'space-between', gap: '32px',
+            flexWrap: 'wrap',
+          }}>
+            <div>
+              <p style={{
+                fontSize: '13px', fontWeight: '600', letterSpacing: '0.1em',
+                textTransform: 'uppercase', color: '#4ade80',
+                fontFamily: 'Inter, sans-serif', marginBottom: '8px',
+              }}>
+                Stay updated
+              </p>
+              <span style={{
+                fontSize: '28px', fontWeight: '700', color: '#ffffff',
+                fontFamily: 'Inter, sans-serif', letterSpacing: '-0.02em',
+                lineHeight: '1.2',
+              }}>
+                Join Our{' '}
+                <span style={{ color: '#22c55e' }}>Newsletter</span>
+              </span>
+            </div>
+            <div style={{ display: 'flex', gap: '12px', alignItems: 'center', flexWrap: 'wrap' }}>
               <input
-                placeholder="Email"
+                placeholder="Enter your email"
                 value={email}
                 onChange={e => setEmail(e.target.value)}
                 onKeyDown={e => e.key === 'Enter' && handleJoin()}
-                className="bg-transparent border border-white/20 rounded-full px-5 py-3 text-white text-sm placeholder-white/30 w-72 focus:outline-none focus:border-[#22c55e]"
+                style={{
+                  background: 'rgba(255,255,255,0.06)',
+                  border: '1px solid rgba(255,255,255,0.12)',
+                  borderRadius: '999px',
+                  padding: '13px 24px',
+                  color: 'white',
+                  fontSize: '14px',
+                  fontFamily: 'Inter, sans-serif',
+                  outline: 'none',
+                  width: '280px',
+                }}
               />
               <button
                 onClick={handleJoin}
-                className="bg-[#22c55e] hover:bg-[#16a34a] text-white rounded-full px-7 py-3 text-sm font-semibold transition-colors duration-200 min-w-[110px]"
+                style={{
+                  background: '#22c55e', color: 'white',
+                  fontSize: '14px', fontWeight: '600',
+                  padding: '13px 28px', borderRadius: '999px',
+                  border: 'none', cursor: 'pointer',
+                  fontFamily: 'Inter, sans-serif',
+                  minWidth: '110px',
+                  letterSpacing: '-0.01em',
+                }}
               >
                 {joined ? 'Joined ✓' : 'Join Now'}
               </button>
             </div>
           </div>
+        </div>
 
-          {/* Links row */}
-          <div className="pt-12 flex flex-row justify-between gap-10">
+        {/* Main links area */}
+        <div style={{
+          maxWidth: '1200px', margin: '0 auto',
+          padding: '64px 80px 48px',
+          display: 'grid',
+          gridTemplateColumns: '280px 1fr',
+          gap: '80px',
+          alignItems: 'start',
+        }}>
 
-            {/* Brand col */}
-            <div style={{ maxWidth: '260px' }}>
-              <div className="text-white font-bold text-lg mb-3">AGRI-FARM</div>
-              <p className="text-white/40 text-sm leading-relaxed">
-                Smarter farming through AI-powered automation and data-driven insights.
-              </p>
-              <div className="mt-5 flex gap-4">
-                {[
-                  { Icon: GithubIcon,   label: 'GitHub' },
-                  { Icon: TwitterIcon,  label: 'Twitter' },
-                  { Icon: LinkedInIcon, label: 'LinkedIn' },
-                ].map(({ Icon, label }) => (
-                  <a key={label} href="#" aria-label={label}
-                    className="text-white/30 hover:text-white transition-colors duration-150">
-                    <Icon />
-                  </a>
-                ))}
-              </div>
+          {/* Brand col */}
+          <div>
+            <div style={{
+              fontSize: '20px', fontWeight: '900', color: '#ffffff',
+              fontFamily: 'Inter, sans-serif', letterSpacing: '0.04em',
+              marginBottom: '16px',
+            }}>
+              AGRI-FARM
             </div>
-
-            {/* Nav cols */}
-            <div className="grid grid-cols-4 gap-10">
-              {navGroups.map(({ heading, links }) => (
-                <div key={heading}>
-                  <h4 className="text-white/30 text-xs uppercase tracking-widest font-semibold mb-4">
-                    {heading}
-                  </h4>
-                  <div className="flex flex-col">
-                    {links.map(link => (
-                      <a key={link} href="#"
-                        className="text-white/50 hover:text-white text-sm leading-loose transition-colors duration-150">
-                        {link}
-                      </a>
-                    ))}
-                  </div>
-                </div>
+            <p style={{
+              fontSize: '14px', color: 'rgba(255,255,255,0.38)',
+              fontFamily: 'Inter, sans-serif', lineHeight: '1.8',
+              marginBottom: '28px',
+            }}>
+              Smarter farming through AI-powered automation and data-driven insights.
+            </p>
+            <div style={{ display: 'flex', gap: '16px', alignItems: 'center' }}>
+              {[
+                { Icon: GithubIcon,   label: 'GitHub' },
+                { Icon: TwitterIcon,  label: 'Twitter' },
+                { Icon: LinkedInIcon, label: 'LinkedIn' },
+              ].map(({ Icon, label }) => (
+                <a key={label} href="#" aria-label={label} style={{
+                  color: 'rgba(255,255,255,0.28)',
+                  display: 'flex', alignItems: 'center',
+                  transition: 'color 0.2s',
+                }}>
+                  <Icon />
+                </a>
               ))}
             </div>
-
           </div>
 
-          {/* Bottom bar */}
-          <div className="mt-10 pt-6 border-t border-white/10 flex flex-row justify-between items-center">
-            <span className="text-white/20 text-xs">© 2026 AGRI-FARM, Inc. All rights reserved.</span>
-            <span className="text-white/20 text-xs">SOC II · 256-bit Encryption · 24/7 Support</span>
+          {/* Nav cols */}
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(4, 1fr)',
+            gap: '40px',
+          }}>
+            {navGroups.map(({ heading, links }) => (
+              <div key={heading}>
+                <h4 style={{
+                  fontSize: '11px', fontWeight: '700',
+                  color: 'rgba(255,255,255,0.28)',
+                  textTransform: 'uppercase', letterSpacing: '0.12em',
+                  fontFamily: 'Inter, sans-serif',
+                  marginBottom: '20px',
+                }}>
+                  {heading}
+                </h4>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                  {links.map(link => (
+                    <a key={link} href="#" style={{
+                      fontSize: '14px',
+                      color: 'rgba(255,255,255,0.5)',
+                      fontFamily: 'Inter, sans-serif',
+                      textDecoration: 'none',
+                      lineHeight: '2.2',
+                      transition: 'color 0.15s',
+                    }}>
+                      {link}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
 
         </div>
+
+        {/* Bottom bar */}
+        <div style={{
+          maxWidth: '1200px', margin: '0 auto',
+          padding: '20px 80px 40px',
+          borderTop: '1px solid rgba(255,255,255,0.07)',
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          gap: '16px',
+          flexWrap: 'wrap',
+        }}>
+          <span style={{
+            fontSize: '12px', color: 'rgba(255,255,255,0.22)',
+            fontFamily: 'Inter, sans-serif',
+          }}>
+            © 2026 AGRI-FARM, Inc. All rights reserved.
+          </span>
+          <div style={{ display: 'flex', gap: '24px', alignItems: 'center' }}>
+            {['SOC II Certified', '256-bit Encryption', '24/7 Support'].map(item => (
+              <span key={item} style={{
+                fontSize: '12px', color: 'rgba(255,255,255,0.22)',
+                fontFamily: 'Inter, sans-serif',
+              }}>
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+
       </footer>
     </>
   );
