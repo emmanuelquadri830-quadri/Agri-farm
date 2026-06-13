@@ -18,8 +18,8 @@ export default function WhyNexora() {
       <div style={{
         position: 'absolute',
         bottom: 0, left: 0, right: 0,
-        height: '160px',
-        background: 'linear-gradient(to bottom, transparent 0%, #ffffff 100%)',
+        height: '320px',
+        background: 'linear-gradient(to bottom, transparent 0%, rgba(255,255,255,0.6) 50%, #ffffff 100%)',
         pointerEvents: 'none',
         zIndex: 10,
       }} />
