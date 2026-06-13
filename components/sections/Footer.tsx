@@ -64,7 +64,7 @@ export default function Footer() {
         {/* Overlay */}
         <div style={{
           position: 'absolute', inset: 0, zIndex: 0,
-          background: 'linear-gradient(135deg, rgba(10,40,20,0.85) 0%, rgba(22,100,50,0.7) 60%, rgba(10,60,30,0.75) 100%)',
+          background: 'linear-gradient(135deg, rgba(10,40,20,0.45) 0%, rgba(22,100,50,0.3) 60%, rgba(10,60,30,0.4) 100%)',
           pointerEvents: 'none',
         }} />
 
