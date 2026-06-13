@@ -4,86 +4,96 @@ import { motion } from 'framer-motion';
 
 export default function CTABanner() {
   return (
-    <section style={{ padding: '0 24px 80px', background: '#ffffff' }}>
-      <motion.div
-        initial={{ opacity: 0, y: 32 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        style={{
-          background: '#111827',
-          borderRadius: '28px',
-          padding: '96px 40px',
-          textAlign: 'center',
-          maxWidth: '1100px',
-          margin: '0 auto',
-          position: 'relative',
-          overflow: 'hidden',
-        }}
-      >
-        {/* Floating badges */}
-        <div style={{
-          position: 'absolute', top: '28px', left: '36px',
-          background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.1)',
-          borderRadius: '10px', padding: '8px 16px',
-          color: 'rgba(255,255,255,0.6)', fontSize: '12px', fontFamily: 'Inter, sans-serif',
-        }}>
-          ✓ No credit card required
-        </div>
-        <div style={{
-          position: 'absolute', top: '28px', right: '36px',
-          background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.1)',
-          borderRadius: '10px', padding: '8px 16px',
-          color: 'rgba(255,255,255,0.6)', fontSize: '12px', fontFamily: 'Inter, sans-serif',
-        }}>
-          ⚡ Setup in 2 minutes
-        </div>
+    <section style={{
+      position: 'relative',
+      minHeight: '380px',
+      overflow: 'hidden',
+      display: 'flex',
+      alignItems: 'center',
+    }}>
+      {/* Background — deep green gradient */}
+      <div style={{
+        position: 'absolute', inset: 0,
+        background: 'linear-gradient(135deg, #052e16 0%, #14532d 40%, #166534 70%, #15803d 100%)',
+        zIndex: 0,
+      }} />
+      {/* Texture overlay */}
+      <div style={{
+        position: 'absolute', inset: 0,
+        backgroundImage: 'radial-gradient(ellipse at 60% 50%, rgba(34,197,94,0.12) 0%, transparent 60%)',
+        zIndex: 1,
+      }} />
 
-        <motion.h2
-          initial={{ opacity: 0, y: 16 }}
+      <div style={{
+        position: 'relative', zIndex: 2,
+        maxWidth: '1100px', margin: '0 auto',
+        padding: '80px 48px',
+        display: 'grid',
+        gridTemplateColumns: '1fr 1fr',
+        gap: '48px',
+        alignItems: 'center',
+        width: '100%',
+      }}>
+        {/* Left */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          style={{
-            fontSize: 'clamp(2rem, 4vw, 3rem)',
-            fontWeight: '700', color: 'white',
-            letterSpacing: '-0.03em', fontFamily: 'Inter, sans-serif',
-            marginBottom: '16px', lineHeight: '1.1',
-          }}
+          transition={{ duration: 0.6 }}
         >
-          Make your first automation in minutes
-        </motion.h2>
-
-        <motion.p
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          style={{
-            fontSize: '17px', color: 'rgba(255,255,255,0.5)',
+          <h2 style={{
+            fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)',
+            fontWeight: '800',
+            color: '#ffffff',
+            lineHeight: '1.15',
+            letterSpacing: '-0.03em',
             fontFamily: 'Inter, sans-serif',
-            maxWidth: '440px', margin: '0 auto 40px', lineHeight: '1.7',
-          }}
-        >
-          Join 100,000+ teams already using AGRI-FARM to move faster and do more with less.
-        </motion.p>
+            marginBottom: '0',
+          }}>
+            Drive predictable outcomes<br />across your agri-food operations
+          </h2>
+        </motion.div>
 
-        <motion.button
-          initial={{ opacity: 0, y: 8 }}
+        {/* Right */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          style={{
-            background: 'white', color: '#111827',
-            padding: '16px 36px', borderRadius: '999px',
-            border: 'none', fontSize: '15px', fontWeight: '700',
-            cursor: 'pointer', fontFamily: 'Inter, sans-serif',
-            letterSpacing: '-0.01em',
-          }}
+          transition={{ duration: 0.6, delay: 0.15 }}
         >
-          Get Started Free
-        </motion.button>
-      </motion.div>
+          <p style={{
+            fontSize: '15px',
+            color: 'rgba(255,255,255,0.65)',
+            lineHeight: '1.7',
+            fontFamily: 'Inter, sans-serif',
+            marginBottom: '24px',
+          }}>
+            Transform your farming operations with AGRI-FARM's AI-powered platform.
+            Reach out today to accelerate growth and boost yields with data-driven insights.
+          </p>
+          <motion.button
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.97 }}
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '8px',
+              background: '#22c55e',
+              color: '#ffffff',
+              fontSize: '14px',
+              fontWeight: '600',
+              padding: '13px 28px',
+              borderRadius: '999px',
+              border: 'none',
+              cursor: 'pointer',
+              fontFamily: 'Inter, sans-serif',
+              letterSpacing: '-0.01em',
+            }}
+          >
+            Schedule a demo →
+          </motion.button>
+        </motion.div>
+      </div>
     </section>
   );
 }
