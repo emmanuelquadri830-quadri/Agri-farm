@@ -58,13 +58,19 @@ export default function Footer() {
           alignItems: 'center',
           backgroundImage: 'url(https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1600&q=80)',
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundPosition: 'center top',
         }}
       >
-        {/* Overlay */}
+        {/* Top overlay — slight darkening so heading is readable */}
         <div style={{
           position: 'absolute', inset: 0, zIndex: 0,
-          background: 'rgba(10,30,18,0.82)',
+          background: 'linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0) 40%)',
+          pointerEvents: 'none',
+        }} />
+        {/* Bottom overlay — bleeds image into footer color */}
+        <div style={{
+          position: 'absolute', inset: 0, zIndex: 0,
+          background: 'linear-gradient(to top, #0a1f12 0%, transparent 50%)',
           pointerEvents: 'none',
         }} />
 
@@ -97,13 +103,21 @@ export default function Footer() {
               letterSpacing: '-0.03em',
               fontFamily: 'Inter, sans-serif',
               maxWidth: '520px',
+              textShadow: '0 2px 12px rgba(0,0,0,0.5)',
             }}>
               Drive predictable outcomes across your agri-food operations
             </h2>
           </div>
 
           {/* Right */}
-          <div style={{ maxWidth: '400px', display: 'flex', flexDirection: 'column', gap: '20px' }}>
+          <div style={{
+            maxWidth: '400px', display: 'flex', flexDirection: 'column', gap: '20px',
+            background: 'rgba(0,0,0,0.25)',
+            backdropFilter: 'blur(8px)',
+            WebkitBackdropFilter: 'blur(8px)',
+            borderRadius: '16px',
+            padding: '24px',
+          }}>
             <p style={{
               fontSize: '16px', color: 'rgba(255,255,255,0.7)',
               lineHeight: '1.75', fontFamily: 'Inter, sans-serif',
