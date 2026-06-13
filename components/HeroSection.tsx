@@ -79,19 +79,7 @@ export default function HeroSection() {
         boxShadow: '0 2px 24px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.04)',
       }}>
         {/* Logo */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexShrink: 0 }}>
-          {/* Leaf icon mark */}
-          <div style={{
-            width: '30px', height: '30px',
-            background: 'linear-gradient(135deg, #22c55e, #15803d)',
-            borderRadius: '8px',
-            display: 'flex', alignItems: 'center', justifyContent: 'center',
-            boxShadow: '0 2px 8px rgba(21,128,61,0.3)',
-          }}>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M12 22c0-7.732-6-11-6-11s6-3.268 6-11c0 7.732 6 11 6 11s-6 3.268-6 11z"/>
-            </svg>
-          </div>
+        <div style={{ display: 'flex', alignItems: 'center', flexShrink: 0 }}>
           <span style={{
             fontSize: '15px',
             fontWeight: '800',
