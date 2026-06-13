@@ -75,121 +75,111 @@ export default function Footer() {
           pointerEvents: 'none',
         }} />
 
-        {/* Content */}
+        {/* Content — centered stack */}
         <div style={{
           position: 'relative', zIndex: 2,
-          maxWidth: '1200px', margin: '0 auto',
-          padding: '120px 60px 110px',
+          maxWidth: '860px', margin: '0 auto',
+          padding: '130px 60px 120px',
           width: '100%',
-          display: 'grid',
-          gridTemplateColumns: '1fr 420px',
+          display: 'flex',
+          flexDirection: 'column',
           alignItems: 'center',
-          gap: '100px',
+          textAlign: 'center',
         }}>
 
-          {/* Left — primary hierarchy */}
-          <div>
-            {/* Eyebrow tag */}
-            <div style={{
-              display: 'inline-flex', alignItems: 'center', gap: '8px',
-              marginBottom: '28px',
+          {/* Eyebrow */}
+          <div style={{
+            display: 'inline-flex', alignItems: 'center', gap: '8px',
+            background: 'rgba(74,222,128,0.12)',
+            border: '1px solid rgba(74,222,128,0.25)',
+            borderRadius: '999px',
+            padding: '6px 16px',
+            marginBottom: '36px',
+          }}>
+            <span style={{
+              display: 'inline-block',
+              width: '5px', height: '5px',
+              borderRadius: '50%',
+              background: '#4ade80',
+              flexShrink: 0,
+            }} />
+            <span style={{
+              fontSize: '11px', fontWeight: '600',
+              letterSpacing: '0.14em', textTransform: 'uppercase',
+              color: '#4ade80', fontFamily: 'Inter, sans-serif',
             }}>
-              <span style={{
-                display: 'inline-block',
-                width: '6px', height: '6px',
-                borderRadius: '50%',
-                background: '#4ade80',
-                flexShrink: 0,
-              }} />
-              <span style={{
-                fontSize: '12px', fontWeight: '600',
-                letterSpacing: '0.14em', textTransform: 'uppercase',
-                color: '#4ade80', fontFamily: 'Inter, sans-serif',
-              }}>
-                Built for farmers
-              </span>
-            </div>
-
-            {/* Headline — two weights for visual drama */}
-            <h2 style={{
-              fontFamily: 'Inter, sans-serif',
-              letterSpacing: '-0.035em',
-              lineHeight: '1.1',
-              margin: 0,
-            }}>
-              <span style={{
-                display: 'block',
-                fontSize: 'clamp(2.6rem, 4.2vw, 3.8rem)',
-                fontWeight: '800',
-                color: '#ffffff',
-              }}>
-                Your land is the asset.
-              </span>
-              <span style={{
-                display: 'block',
-                fontSize: 'clamp(2.6rem, 4.2vw, 3.8rem)',
-                fontWeight: '300',
-                color: 'rgba(255,255,255,0.65)',
-                marginTop: '4px',
-              }}>
-                Let's keep it working.
-              </span>
-            </h2>
+              Built for farmers
+            </span>
           </div>
 
-          {/* Right — supporting + CTA */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
-            {/* Thin rule */}
-            <div style={{
-              width: '32px', height: '1.5px',
-              background: '#4ade80',
-              marginBottom: '24px',
-              borderRadius: '2px',
-            }} />
-
-            <p style={{
-              fontSize: '15px',
-              color: 'rgba(255,255,255,0.62)',
-              lineHeight: '1.8',
-              fontFamily: 'Inter, sans-serif',
-              fontWeight: '400',
-              marginBottom: '36px',
-              letterSpacing: '0.01em',
+          {/* Headline — dominant, two-tone weight contrast */}
+          <h2 style={{
+            fontFamily: 'Inter, sans-serif',
+            letterSpacing: '-0.04em',
+            lineHeight: '1.06',
+            margin: '0 0 28px',
+            textAlign: 'center',
+          }}>
+            <span style={{
+              display: 'block',
+              fontSize: 'clamp(3rem, 5.5vw, 5.2rem)',
+              fontWeight: '800',
+              color: '#ffffff',
             }}>
-              AGRI-FARM brings together field data, weather patterns, and market
-              signals — so every decision you make is backed by something real,
-              not a guess.
-            </p>
+              Your land is the asset.
+            </span>
+            <span style={{
+              display: 'block',
+              fontSize: 'clamp(3rem, 5.5vw, 5.2rem)',
+              fontWeight: '300',
+              color: 'rgba(255,255,255,0.45)',
+              marginTop: '6px',
+            }}>
+              Let's keep it working.
+            </span>
+          </h2>
 
-            {/* CTA row */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-              <button style={{
-                background: 'linear-gradient(135deg, #22c55e 0%, #15803d 100%)',
-                color: 'white',
-                fontSize: '14px', fontWeight: '600',
-                padding: '15px 32px',
-                borderRadius: '10px',
-                border: 'none', cursor: 'pointer',
-                fontFamily: 'Inter, sans-serif',
-                letterSpacing: '-0.01em',
-                boxShadow: '0 4px 20px rgba(34,197,94,0.35)',
-              }}>
-                Schedule a demo
-              </button>
-              <a href="#" style={{
-                display: 'flex', alignItems: 'center', gap: '6px',
-                fontSize: '14px',
-                color: 'rgba(255,255,255,0.45)',
-                fontFamily: 'Inter, sans-serif',
-                textDecoration: 'none',
-                fontWeight: '500',
-                letterSpacing: '0.01em',
-                transition: 'color 0.15s',
-              }}>
-                Learn more
-                <span style={{ fontSize: '16px', lineHeight: 1 }}>→</span>
-              </a>
-            </div>
+          {/* Sub-copy — supporting, not competing */}
+          <p style={{
+            fontSize: '16px',
+            color: 'rgba(255,255,255,0.5)',
+            lineHeight: '1.75',
+            fontFamily: 'Inter, sans-serif',
+            fontWeight: '400',
+            maxWidth: '520px',
+            margin: '0 0 48px',
+            letterSpacing: '0.005em',
+          }}>
+            Field data, weather patterns, market signals — every decision you
+            make, backed by something real.
+          </p>
+
+          {/* CTA row */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '16px', flexWrap: 'wrap', justifyContent: 'center' }}>
+            <button style={{
+              background: 'linear-gradient(135deg, #22c55e 0%, #15803d 100%)',
+              color: 'white',
+              fontSize: '15px', fontWeight: '600',
+              padding: '16px 36px',
+              borderRadius: '12px',
+              border: 'none', cursor: 'pointer',
+              fontFamily: 'Inter, sans-serif',
+              letterSpacing: '-0.01em',
+              boxShadow: '0 6px 28px rgba(34,197,94,0.38)',
+            }}>
+              Schedule a demo
+            </button>
+            <a href="#" style={{
+              display: 'inline-flex', alignItems: 'center', gap: '6px',
+              fontSize: '14px',
+              color: 'rgba(255,255,255,0.42)',
+              fontFamily: 'Inter, sans-serif',
+              textDecoration: 'none',
+              fontWeight: '500',
+              padding: '16px 8px',
+            }}>
+              See how it works <span>→</span>
+            </a>
           </div>
 
         </div>
