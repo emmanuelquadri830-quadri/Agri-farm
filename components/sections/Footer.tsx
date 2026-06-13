@@ -53,91 +53,145 @@ export default function Footer() {
         style={{
           position: 'relative',
           overflow: 'hidden',
-          minHeight: '520px',
+          minHeight: '620px',
           display: 'flex',
           alignItems: 'center',
           backgroundImage: 'url(https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1600&q=80)',
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundPosition: 'center 40%',
         }}
       >
-        {/* Top fade from white */}
+        {/* Top fade — short, barely-there, just softens the hard edge */}
         <div style={{
           position: 'absolute', top: 0, left: 0, right: 0,
-          height: '220px', zIndex: 1,
-          background: 'linear-gradient(to bottom, #ffffff 0%, rgba(255,255,255,0.0) 100%)',
+          height: '90px', zIndex: 1,
+          background: 'linear-gradient(to bottom, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0) 100%)',
           pointerEvents: 'none',
         }} />
-        {/* Bottom fade to footer */}
+        {/* Ambient dark layer so text stays readable */}
         <div style={{
           position: 'absolute', inset: 0, zIndex: 0,
-          background: 'linear-gradient(to bottom, rgba(10,40,20,0.05) 0%, rgba(10,40,20,0.25) 55%, rgba(7,21,16,0.85) 80%, #071510 100%)',
+          background: 'linear-gradient(160deg, rgba(5,20,10,0.18) 0%, rgba(5,20,10,0.52) 60%, rgba(7,21,16,0.92) 100%)',
           pointerEvents: 'none',
         }} />
 
         {/* Content */}
         <div style={{
-          position: 'relative', zIndex: 1,
+          position: 'relative', zIndex: 2,
           maxWidth: '1200px', margin: '0 auto',
-          padding: '96px 60px',
+          padding: '120px 60px 110px',
           width: '100%',
-          display: 'flex',
-          flexDirection: 'row',
+          display: 'grid',
+          gridTemplateColumns: '1fr 420px',
           alignItems: 'center',
-          justifyContent: 'space-between',
-          gap: '80px',
+          gap: '100px',
         }}>
-          {/* Left heading */}
-          <div style={{ flex: 1 }}>
-            <p style={{
-              fontSize: '13px', fontWeight: '600', letterSpacing: '0.12em',
-              textTransform: 'uppercase', color: '#4ade80',
-              fontFamily: 'Inter, sans-serif', marginBottom: '20px',
+
+          {/* Left — primary hierarchy */}
+          <div>
+            {/* Eyebrow tag */}
+            <div style={{
+              display: 'inline-flex', alignItems: 'center', gap: '8px',
+              marginBottom: '28px',
             }}>
-              Built for farmers
-            </p>
+              <span style={{
+                display: 'inline-block',
+                width: '6px', height: '6px',
+                borderRadius: '50%',
+                background: '#4ade80',
+                flexShrink: 0,
+              }} />
+              <span style={{
+                fontSize: '12px', fontWeight: '600',
+                letterSpacing: '0.14em', textTransform: 'uppercase',
+                color: '#4ade80', fontFamily: 'Inter, sans-serif',
+              }}>
+                Built for farmers
+              </span>
+            </div>
+
+            {/* Headline — two weights for visual drama */}
             <h2 style={{
-              fontSize: 'clamp(2rem, 3.5vw, 3rem)',
-              fontWeight: '800',
-              color: '#ffffff',
-              lineHeight: '1.15',
-              letterSpacing: '-0.03em',
               fontFamily: 'Inter, sans-serif',
-              maxWidth: '620px',
+              letterSpacing: '-0.035em',
+              lineHeight: '1.1',
+              margin: 0,
             }}>
-              Your land is the asset. Let's keep it working.
+              <span style={{
+                display: 'block',
+                fontSize: 'clamp(2.6rem, 4.2vw, 3.8rem)',
+                fontWeight: '800',
+                color: '#ffffff',
+              }}>
+                Your land is the asset.
+              </span>
+              <span style={{
+                display: 'block',
+                fontSize: 'clamp(2.6rem, 4.2vw, 3.8rem)',
+                fontWeight: '300',
+                color: 'rgba(255,255,255,0.65)',
+                marginTop: '4px',
+              }}>
+                Let's keep it working.
+              </span>
             </h2>
           </div>
 
-          {/* Right */}
-          <div style={{ maxWidth: '480px', display: 'flex', flexDirection: 'column', gap: '20px' }}>
+          {/* Right — supporting + CTA */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
+            {/* Thin rule */}
+            <div style={{
+              width: '32px', height: '1.5px',
+              background: '#4ade80',
+              marginBottom: '24px',
+              borderRadius: '2px',
+            }} />
+
             <p style={{
-              fontSize: '16px', color: 'rgba(255,255,255,0.7)',
-              lineHeight: '1.75', fontFamily: 'Inter, sans-serif',
+              fontSize: '15px',
+              color: 'rgba(255,255,255,0.62)',
+              lineHeight: '1.8',
+              fontFamily: 'Inter, sans-serif',
+              fontWeight: '400',
+              marginBottom: '36px',
+              letterSpacing: '0.01em',
             }}>
-              AGRI-FARM brings together field data, weather patterns, and market signals —
-              so every decision you make is backed by something real, not a guess.
+              AGRI-FARM brings together field data, weather patterns, and market
+              signals — so every decision you make is backed by something real,
+              not a guess.
             </p>
-            <div style={{ display: 'flex', gap: '12px', alignItems: 'center', flexWrap: 'wrap' }}>
+
+            {/* CTA row */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
               <button style={{
-                background: '#22c55e', color: 'white',
+                background: 'linear-gradient(135deg, #22c55e 0%, #15803d 100%)',
+                color: 'white',
                 fontSize: '14px', fontWeight: '600',
-                padding: '14px 32px', borderRadius: '999px',
+                padding: '15px 32px',
+                borderRadius: '10px',
                 border: 'none', cursor: 'pointer',
                 fontFamily: 'Inter, sans-serif',
                 letterSpacing: '-0.01em',
+                boxShadow: '0 4px 20px rgba(34,197,94,0.35)',
               }}>
-                Schedule a demo →
+                Schedule a demo
               </button>
               <a href="#" style={{
-                fontSize: '14px', color: 'rgba(255,255,255,0.55)',
-                fontFamily: 'Inter, sans-serif', textDecoration: 'none',
+                display: 'flex', alignItems: 'center', gap: '6px',
+                fontSize: '14px',
+                color: 'rgba(255,255,255,0.45)',
+                fontFamily: 'Inter, sans-serif',
+                textDecoration: 'none',
                 fontWeight: '500',
+                letterSpacing: '0.01em',
+                transition: 'color 0.15s',
               }}>
                 Learn more
+                <span style={{ fontSize: '16px', lineHeight: 1 }}>→</span>
               </a>
             </div>
           </div>
+
         </div>
       </section>
 
