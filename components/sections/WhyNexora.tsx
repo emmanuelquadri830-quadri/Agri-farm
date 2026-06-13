@@ -12,7 +12,17 @@ export default function WhyNexora() {
       width: '100%',
       padding: '100px 0',
       margin: 0,
+      position: 'relative',
     }}>
+      {/* Bottom fade into white */}
+      <div style={{
+        position: 'absolute',
+        bottom: 0, left: 0, right: 0,
+        height: '160px',
+        background: 'linear-gradient(to bottom, transparent 0%, #ffffff 100%)',
+        pointerEvents: 'none',
+        zIndex: 10,
+      }} />
       <style>{`
         @media (max-width: 768px) {
           .wnx-section { padding: 60px 5% 0 !important; }
