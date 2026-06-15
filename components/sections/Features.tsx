@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { CheckCircle } from 'lucide-react';
 
 export default function Features() {
   return (
@@ -16,15 +15,6 @@ export default function Features() {
           transition={{ duration: 0.5 }}
           style={{ textAlign: 'center', marginBottom: '48px' }}
         >
-          <div style={{
-            display: 'inline-flex', alignItems: 'center', gap: '6px',
-            border: '1px solid #e5e7eb', background: 'white',
-            borderRadius: '999px', padding: '4px 12px',
-            fontSize: '12px', color: '#6b7280',
-            fontFamily: 'Inter, sans-serif', marginBottom: '20px',
-          }}>
-            <span style={{ color: '#22c55e', fontSize: '8px' }}>●</span> Features
-          </div>
           <h2 style={{
             fontSize: 'clamp(1.8rem, 3.5vw, 2.5rem)',
             fontWeight: '700', color: '#111827',
