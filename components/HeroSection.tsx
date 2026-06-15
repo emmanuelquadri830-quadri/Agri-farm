@@ -98,12 +98,12 @@ export default function HeroSection() {
           padding: '4px',
         }}>
           {[
-            { label: 'Home',     active: true },
-            { label: 'Features', active: false },
-            { label: 'Pricing',  active: false },
-            { label: 'About',    active: false },
-          ].map(({ label, active }) => (
-            <a key={label} href="#" style={{
+            { label: 'Home',     href: '/',           active: true },
+            { label: 'Features', href: '/#features',  active: false },
+            { label: 'Pricing',  href: '/#pricing',   active: false },
+            { label: 'About',    href: '/about',      active: false },
+          ].map(({ label, href, active }) => (
+            <a key={label} href={href} style={{
               fontSize: '13.5px',
               color: active ? '#15803d' : '#4b5563',
               textDecoration: 'none',
