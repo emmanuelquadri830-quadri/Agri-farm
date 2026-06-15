@@ -237,44 +237,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── STATS ── */}
-      <section style={{ background: '#071510', padding: '72px 60px' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(4, 1fr)',
-            gap: '0',
-          }}>
-            {stats.map(({ value, label }, i) => (
-              <motion.div
-                key={label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                style={{
-                  padding: '0 40px',
-                  borderRight: i < stats.length - 1 ? '1px solid rgba(255,255,255,0.08)' : 'none',
-                  textAlign: 'center',
-                }}
-              >
-                <div style={{
-                  fontSize: 'clamp(2.4rem, 4vw, 3.6rem)',
-                  fontWeight: '800', color: '#ffffff',
-                  letterSpacing: '-0.04em', lineHeight: '1',
-                  marginBottom: '10px',
-                }}>{value}</div>
-                <div style={{
-                  fontSize: '13px', fontWeight: '500',
-                  color: 'rgba(255,255,255,0.4)',
-                  textTransform: 'uppercase', letterSpacing: '0.1em',
-                }}>{label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── AI-FIRST TRANSFORMATION ── */}
       <section style={{ background: '#ffffff', padding: '100px 60px' }}>
         <div style={{
