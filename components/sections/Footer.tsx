@@ -53,33 +53,39 @@ export default function Footer() {
         style={{
           position: 'relative',
           overflow: 'hidden',
-          minHeight: '620px',
+          minHeight: '760px',
           display: 'flex',
-          alignItems: 'center',
+          alignItems: 'flex-end',
           backgroundImage: 'url(https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1600&q=80)',
           backgroundSize: 'cover',
-          backgroundPosition: 'center 40%',
+          backgroundPosition: 'center 55%',
         }}
       >
-        {/* Top fade — full white dissolve so image emerges from the section above */}
+        {/* Top fade — tall solid-white dissolve, image appears well below the join */}
         <div style={{
           position: 'absolute', top: 0, left: 0, right: 0,
-          height: '260px', zIndex: 1,
-          background: 'linear-gradient(to bottom, #ffffff 0%, rgba(255,255,255,0.85) 30%, rgba(255,255,255,0.3) 65%, rgba(255,255,255,0) 100%)',
+          height: '420px', zIndex: 1,
+          background: 'linear-gradient(to bottom, #ffffff 0%, #ffffff 15%, rgba(255,255,255,0.7) 45%, rgba(255,255,255,0) 100%)',
           pointerEvents: 'none',
         }} />
-        {/* Ambient dark layer so text stays readable */}
+        {/* Centre vignette — darkens mid-section so text reads cleanly */}
         <div style={{
           position: 'absolute', inset: 0, zIndex: 0,
-          background: 'linear-gradient(to bottom, rgba(5,20,10,0.1) 0%, rgba(5,20,10,0.38) 50%, rgba(7,21,16,0.88) 85%, #071510 100%)',
+          background: 'radial-gradient(ellipse 80% 60% at 50% 70%, rgba(4,14,8,0.55) 0%, rgba(4,14,8,0) 100%)',
+          pointerEvents: 'none',
+        }} />
+        {/* Bottom fade to footer */}
+        <div style={{
+          position: 'absolute', inset: 0, zIndex: 0,
+          background: 'linear-gradient(to bottom, rgba(4,14,8,0) 0%, rgba(4,14,8,0.12) 45%, rgba(7,21,16,0.82) 78%, #071510 100%)',
           pointerEvents: 'none',
         }} />
 
-        {/* Content — centered stack */}
+        {/* Content — centered stack, sits in the lower rich-image zone */}
         <div style={{
           position: 'relative', zIndex: 2,
-          maxWidth: '860px', margin: '0 auto',
-          padding: '130px 60px 120px',
+          maxWidth: '800px', margin: '0 auto',
+          padding: '80px 60px 100px',
           width: '100%',
           display: 'flex',
           flexDirection: 'column',
@@ -90,11 +96,12 @@ export default function Footer() {
           {/* Eyebrow */}
           <div style={{
             display: 'inline-flex', alignItems: 'center', gap: '8px',
-            background: 'rgba(74,222,128,0.12)',
-            border: '1px solid rgba(74,222,128,0.25)',
+            background: 'rgba(74,222,128,0.1)',
+            border: '1px solid rgba(74,222,128,0.3)',
             borderRadius: '999px',
             padding: '6px 16px',
-            marginBottom: '36px',
+            marginBottom: '32px',
+            backdropFilter: 'blur(8px)',
           }}>
             <span style={{
               display: 'inline-block',
@@ -112,46 +119,49 @@ export default function Footer() {
             </span>
           </div>
 
-          {/* Headline — dominant, two-tone weight contrast */}
+          {/* Headline */}
           <h2 style={{
             fontFamily: 'Inter, sans-serif',
             letterSpacing: '-0.04em',
             lineHeight: '1.06',
-            margin: '0 0 28px',
+            margin: '0 0 24px',
             textAlign: 'center',
           }}>
             <span style={{
               display: 'block',
-              fontSize: 'clamp(3rem, 5.5vw, 5.2rem)',
+              fontSize: 'clamp(2.8rem, 5vw, 4.8rem)',
               fontWeight: '800',
               color: '#ffffff',
+              textShadow: '0 2px 32px rgba(0,0,0,0.45)',
             }}>
               Your land is the asset.
             </span>
             <span style={{
               display: 'block',
-              fontSize: 'clamp(3rem, 5.5vw, 5.2rem)',
+              fontSize: 'clamp(2.8rem, 5vw, 4.8rem)',
               fontWeight: '300',
-              color: 'rgba(255,255,255,0.45)',
-              marginTop: '6px',
+              color: 'rgba(255,255,255,0.52)',
+              marginTop: '4px',
+              textShadow: '0 2px 24px rgba(0,0,0,0.35)',
             }}>
               Let's keep it working.
             </span>
           </h2>
 
-          {/* Sub-copy — supporting, not competing */}
+          {/* Sub-copy */}
           <p style={{
             fontSize: '16px',
-            color: 'rgba(255,255,255,0.5)',
+            color: 'rgba(255,255,255,0.65)',
             lineHeight: '1.75',
             fontFamily: 'Inter, sans-serif',
             fontWeight: '400',
-            maxWidth: '520px',
-            margin: '0 0 48px',
-            letterSpacing: '0.005em',
+            maxWidth: '480px',
+            margin: '0 0 44px',
+            letterSpacing: '0.01em',
+            textShadow: '0 1px 12px rgba(0,0,0,0.4)',
           }}>
-            Field data, weather patterns, market signals — every decision you
-            make, backed by something real.
+            Field data, weather patterns, market signals — every decision
+            you make, backed by something real.
           </p>
 
           {/* CTA row */}
@@ -172,7 +182,7 @@ export default function Footer() {
             <a href="#" style={{
               display: 'inline-flex', alignItems: 'center', gap: '6px',
               fontSize: '14px',
-              color: 'rgba(255,255,255,0.42)',
+              color: 'rgba(255,255,255,0.5)',
               fontFamily: 'Inter, sans-serif',
               textDecoration: 'none',
               fontWeight: '500',
