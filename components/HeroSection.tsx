@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import DashboardPreview from "@/components/DashboardPreview";
 
 const WORDS = ['Operations', 'Workflows', 'Automation', 'Productivity'];
@@ -103,7 +104,7 @@ export default function HeroSection() {
             { label: 'Pricing',  href: '/#pricing',   active: false },
             { label: 'About',    href: '/about',      active: false },
           ].map(({ label, href, active }) => (
-            <a key={label} href={href} style={{
+            <Link key={label} href={href} style={{
               fontSize: '13.5px',
               color: active ? '#15803d' : '#4b5563',
               textDecoration: 'none',
@@ -115,7 +116,7 @@ export default function HeroSection() {
               boxShadow: active ? '0 1px 4px rgba(0,0,0,0.08)' : 'none',
               letterSpacing: '0.01em',
               transition: 'all 0.15s ease',
-            }}>{label}</a>
+            }}>{label}</Link>
           ))}
         </div>
 
