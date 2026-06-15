@@ -61,11 +61,11 @@ export default function Footer() {
           backgroundPosition: 'center 40%',
         }}
       >
-        {/* Top fade — whisper only, lets the image breathe */}
+        {/* Top fade — full white dissolve so image emerges from the section above */}
         <div style={{
           position: 'absolute', top: 0, left: 0, right: 0,
-          height: '60px', zIndex: 1,
-          background: 'linear-gradient(to bottom, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0) 100%)',
+          height: '260px', zIndex: 1,
+          background: 'linear-gradient(to bottom, #ffffff 0%, rgba(255,255,255,0.85) 30%, rgba(255,255,255,0.3) 65%, rgba(255,255,255,0) 100%)',
           pointerEvents: 'none',
         }} />
         {/* Ambient dark layer so text stays readable */}
