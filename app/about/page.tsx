@@ -442,8 +442,8 @@ export default function AboutPage() {
 
                   {/* Event */}
                   <p style={{
-                    fontSize: '15px', color: '#374151',
-                    lineHeight: '1.65', paddingTop: '0',
+                    fontSize: '15px',
+                    lineHeight: '1.65',
                     fontWeight: i === timeline.length - 1 ? '600' : '400',
                     color: i === timeline.length - 1 ? '#111827' : '#374151',
                   } as React.CSSProperties}>{event}</p>
