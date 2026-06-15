@@ -61,17 +61,17 @@ export default function Footer() {
           backgroundPosition: 'center 40%',
         }}
       >
-        {/* Top fade — short, barely-there, just softens the hard edge */}
+        {/* Top fade — whisper only, lets the image breathe */}
         <div style={{
           position: 'absolute', top: 0, left: 0, right: 0,
-          height: '90px', zIndex: 1,
-          background: 'linear-gradient(to bottom, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0) 100%)',
+          height: '60px', zIndex: 1,
+          background: 'linear-gradient(to bottom, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0) 100%)',
           pointerEvents: 'none',
         }} />
         {/* Ambient dark layer so text stays readable */}
         <div style={{
           position: 'absolute', inset: 0, zIndex: 0,
-          background: 'linear-gradient(160deg, rgba(5,20,10,0.18) 0%, rgba(5,20,10,0.52) 60%, rgba(7,21,16,0.92) 100%)',
+          background: 'linear-gradient(to bottom, rgba(5,20,10,0.1) 0%, rgba(5,20,10,0.38) 50%, rgba(7,21,16,0.88) 85%, #071510 100%)',
           pointerEvents: 'none',
         }} />
 
