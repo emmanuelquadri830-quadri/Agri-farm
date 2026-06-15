@@ -125,55 +125,114 @@ export default function AboutPage() {
       {/* ── HERO ── */}
       <section style={{
         position: 'relative', overflow: 'hidden',
-        minHeight: '560px', display: 'flex', alignItems: 'center',
+        minHeight: '680px', display: 'flex', alignItems: 'center',
         backgroundImage: 'url(https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1600&q=80)',
-        backgroundSize: 'cover', backgroundPosition: 'center 60%',
+        backgroundSize: 'cover', backgroundPosition: 'center 55%',
       }}>
+        {/* Layered overlays — deep at centre, lighter at edges */}
         <div style={{
           position: 'absolute', inset: 0,
-          background: 'linear-gradient(to bottom, rgba(4,14,8,0.65) 0%, rgba(4,14,8,0.75) 60%, #071510 100%)',
+          background: 'radial-gradient(ellipse 90% 80% at 50% 55%, rgba(4,14,8,0.72) 0%, rgba(4,14,8,0.42) 100%)',
         }} />
         <div style={{
+          position: 'absolute', inset: 0,
+          background: 'linear-gradient(to bottom, rgba(4,14,8,0.3) 0%, rgba(4,14,8,0.55) 55%, #071510 100%)',
+        }} />
+
+        <div style={{
           position: 'relative', zIndex: 2,
-          maxWidth: '1200px', margin: '0 auto',
-          padding: '160px 60px 100px', width: '100%',
+          width: '100%', maxWidth: '1200px', margin: '0 auto',
+          padding: '160px 60px 110px',
+          display: 'flex', flexDirection: 'column',
+          alignItems: 'center', textAlign: 'center',
         }}>
           <motion.div
-            initial={{ opacity: 0, y: 24 }}
+            initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 0.75 }}
+            style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
           >
-            <p style={{
-              fontSize: '12px', fontWeight: '700', letterSpacing: '0.16em',
-              textTransform: 'uppercase', color: '#4ade80', marginBottom: '20px',
-            }}>About AGRI-FARM</p>
-            <h1 style={{
-              fontSize: 'clamp(2.4rem, 5vw, 4.2rem)',
-              fontWeight: '800', color: '#ffffff',
-              letterSpacing: '-0.04em', lineHeight: '1.08',
-              maxWidth: '720px', marginBottom: '24px',
+            {/* Eyebrow — horizontal rule + label + rule */}
+            <div style={{
+              display: 'flex', alignItems: 'center', gap: '14px',
+              marginBottom: '36px',
             }}>
-              We built this for the farmer.<br />
-              <span style={{ fontWeight: '300', color: 'rgba(255,255,255,0.5)' }}>
+              <div style={{ width: '40px', height: '1px', background: 'rgba(74,222,128,0.5)' }} />
+              <span style={{
+                fontSize: '11px', fontWeight: '700', letterSpacing: '0.2em',
+                textTransform: 'uppercase', color: '#4ade80',
+              }}>About AGRI-FARM</span>
+              <div style={{ width: '40px', height: '1px', background: 'rgba(74,222,128,0.5)' }} />
+            </div>
+
+            {/* Headline */}
+            <h1 style={{
+              fontFamily: 'Inter, sans-serif',
+              letterSpacing: '-0.045em',
+              lineHeight: '1.04',
+              margin: '0 0 28px',
+              textAlign: 'center',
+            }}>
+              <span style={{
+                display: 'block',
+                fontSize: 'clamp(3rem, 6vw, 5.6rem)',
+                fontWeight: '800',
+                color: '#ffffff',
+                textShadow: '0 2px 40px rgba(0,0,0,0.4)',
+              }}>
+                We built this for the farmer.
+              </span>
+              <span style={{
+                display: 'block',
+                fontSize: 'clamp(3rem, 6vw, 5.6rem)',
+                fontWeight: '300',
+                color: 'rgba(255,255,255,0.38)',
+                marginTop: '4px',
+                letterSpacing: '-0.03em',
+              }}>
                 Not for the boardroom.
               </span>
             </h1>
+
+            {/* Divider line */}
+            <div style={{
+              width: '48px', height: '2px',
+              background: 'linear-gradient(90deg, #22c55e, #15803d)',
+              borderRadius: '2px', marginBottom: '28px',
+            }} />
+
+            {/* Sub-copy */}
             <p style={{
-              fontSize: '17px', color: 'rgba(255,255,255,0.6)',
-              lineHeight: '1.75', maxWidth: '560px', marginBottom: '36px',
+              fontSize: '17px', color: 'rgba(255,255,255,0.55)',
+              lineHeight: '1.8', maxWidth: '580px',
+              textAlign: 'center', marginBottom: '44px',
+              letterSpacing: '0.01em',
+              textShadow: '0 1px 16px rgba(0,0,0,0.35)',
             }}>
-              AGRI-FARM is an AI-powered platform that gives farming operations the
-              visibility, automation, and intelligence they need to grow sustainably —
-              at any scale.
+              AGRI-FARM is an AI-powered platform that gives farming operations
+              the visibility, automation, and intelligence they need to grow
+              sustainably — at any scale.
             </p>
-            <Link href="#" style={{
-              display: 'inline-block',
-              background: 'linear-gradient(135deg, #22c55e, #15803d)',
-              color: 'white', fontSize: '14px', fontWeight: '600',
-              padding: '15px 32px', borderRadius: '12px', textDecoration: 'none',
-              boxShadow: '0 6px 24px rgba(34,197,94,0.35)',
-              letterSpacing: '-0.01em',
-            }}>Contact us</Link>
+
+            {/* CTAs */}
+            <div style={{ display: 'flex', gap: '14px', alignItems: 'center', flexWrap: 'wrap', justifyContent: 'center' }}>
+              <Link href="#" style={{
+                display: 'inline-block',
+                background: 'linear-gradient(135deg, #22c55e, #15803d)',
+                color: 'white', fontSize: '14px', fontWeight: '600',
+                padding: '15px 34px', borderRadius: '12px', textDecoration: 'none',
+                boxShadow: '0 6px 28px rgba(34,197,94,0.38)',
+                letterSpacing: '-0.01em',
+              }}>Contact us</Link>
+              <Link href="/" style={{
+                display: 'inline-flex', alignItems: 'center', gap: '6px',
+                color: 'rgba(255,255,255,0.5)', fontSize: '14px',
+                fontWeight: '500', textDecoration: 'none',
+                padding: '15px 8px', letterSpacing: '0.01em',
+              }}>
+                View the platform <span style={{ fontSize: '16px' }}>→</span>
+              </Link>
+            </div>
           </motion.div>
         </div>
       </section>
