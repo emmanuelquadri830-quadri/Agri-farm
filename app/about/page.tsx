@@ -67,13 +67,6 @@ function Navbar() {
   );
 }
 
-const stats = [
-  { value: '2.4M+', label: 'Acres Monitored' },
-  { value: '50,000+', label: 'Farmers Empowered' },
-  { value: '180+', label: 'Countries Reached' },
-  { value: '320+', label: 'Crop Varieties Tracked' },
-];
-
 const pillars = [
   {
     icon: '🌍',
@@ -237,81 +230,113 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── AI-FIRST TRANSFORMATION ── */}
+      {/* ── WHO WE ARE ── */}
       <section style={{ background: '#ffffff', padding: '100px 60px' }}>
-        <div style={{
-          maxWidth: '1200px', margin: '0 auto',
-          display: 'grid', gridTemplateColumns: '1fr 1fr',
-          gap: '80px', alignItems: 'center',
-        }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+
+          {/* Section label */}
           <motion.div
-            initial={{ opacity: 0, x: -24 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.5 }}
+            style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '56px' }}
           >
-            <p style={{
-              fontSize: '12px', fontWeight: '700', letterSpacing: '0.14em',
-              textTransform: 'uppercase', color: '#16a34a', marginBottom: '16px',
-            }}>Who we are</p>
-            <h2 style={{
-              fontSize: 'clamp(1.9rem, 3vw, 2.8rem)',
-              fontWeight: '800', color: '#111827',
-              letterSpacing: '-0.035em', lineHeight: '1.12',
-              marginBottom: '20px',
-            }}>
-              AI-first digital transformation for agriculture
-            </h2>
-            <p style={{
-              fontSize: '16px', color: '#6b7280',
-              lineHeight: '1.8', marginBottom: '20px',
-            }}>
-              The agricultural sector faces a systemic challenge: too many decisions made
-              with too little data. Unpredictable weather, fragmented supply chains, and
-              shrinking margins leave farmers exposed.
-            </p>
-            <p style={{
-              fontSize: '16px', color: '#6b7280', lineHeight: '1.8',
-            }}>
-              AGRI-FARM was built to change that. By layering AI on top of field data,
-              market signals, and agronomic knowledge, we give every farmer — from a
-              1-acre smallholder to a 50,000-acre operation — a platform that thinks ahead.
-            </p>
+            <div style={{ width: '32px', height: '2px', background: '#22c55e', borderRadius: '2px' }} />
+            <span style={{
+              fontSize: '11px', fontWeight: '700', letterSpacing: '0.18em',
+              textTransform: 'uppercase', color: '#16a34a',
+            }}>Who we are</span>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 24 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            style={{
-              background: '#f9fafb', borderRadius: '20px',
-              padding: '48px 40px', border: '1px solid #f0f0f0',
-            }}
-          >
-            {[
-              { n: '01', title: 'Fragmented data', body: 'Soil readings, weather feeds, and yield records exist in silos. We unify them.' },
-              { n: '02', title: 'Reactive decisions', body: 'Most farms respond to problems after they happen. We help you see them coming.' },
-              { n: '03', title: 'Market opacity', body: 'Farmers sell blind. AGRI-FARM surfaces pricing signals so you negotiate from strength.' },
-            ].map(({ n, title, body }) => (
-              <div key={n} style={{
-                display: 'flex', gap: '20px',
+          <div style={{
+            display: 'grid', gridTemplateColumns: '1fr 1fr',
+            gap: '80px', alignItems: 'start',
+          }}>
+
+            {/* Left */}
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 style={{
+                fontSize: 'clamp(2.2rem, 3.5vw, 3.2rem)',
+                fontWeight: '800', color: '#0f172a',
+                letterSpacing: '-0.04em', lineHeight: '1.1',
                 marginBottom: '32px',
               }}>
-                <span style={{
-                  fontSize: '12px', fontWeight: '700', color: '#22c55e',
-                  letterSpacing: '0.08em', flexShrink: 0, paddingTop: '2px',
-                }}>{n}</span>
-                <div>
-                  <h4 style={{
-                    fontSize: '15px', fontWeight: '700', color: '#111827',
-                    marginBottom: '6px', letterSpacing: '-0.01em',
-                  }}>{title}</h4>
-                  <p style={{ fontSize: '14px', color: '#6b7280', lineHeight: '1.65' }}>{body}</p>
+                AI-first digital<br />transformation<br />for agriculture
+              </h2>
+
+              {/* Divider */}
+              <div style={{ width: '100%', height: '1px', background: '#f0f0f0', marginBottom: '32px' }} />
+
+              <p style={{
+                fontSize: '16px', color: '#374151',
+                lineHeight: '1.85', marginBottom: '24px',
+                fontWeight: '400',
+              }}>
+                The agricultural sector faces a systemic challenge: too many decisions
+                made with too little data. Unpredictable weather, fragmented supply chains,
+                and shrinking margins leave farmers exposed.
+              </p>
+              <p style={{
+                fontSize: '16px', color: '#6b7280', lineHeight: '1.85',
+              }}>
+                AGRI-FARM was built to change that. By layering AI on top of field data,
+                market signals, and agronomic knowledge, we give every farmer from a
+                1-acre smallholder to a 50,000-acre operation a platform that thinks ahead.
+              </p>
+            </motion.div>
+
+            {/* Right — challenge cards */}
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.12 }}
+              style={{ display: 'flex', flexDirection: 'column' }}
+            >
+              {[
+                {
+                  n: '01',
+                  title: 'Fragmented data',
+                  body: 'Soil readings, weather feeds, and yield records exist in silos. We bring them together in one place.',
+                },
+                {
+                  n: '02',
+                  title: 'Reactive decisions',
+                  body: 'Most farms respond to problems after they happen. We help you see what is coming before it arrives.',
+                },
+                {
+                  n: '03',
+                  title: 'Market opacity',
+                  body: 'Farmers sell blind. AGRI-FARM surfaces real-time pricing signals so you negotiate from a position of strength.',
+                },
+              ].map(({ n, title, body }, i, arr) => (
+                <div key={n} style={{
+                  display: 'flex', gap: '24px', padding: '32px 0',
+                  borderBottom: i < arr.length - 1 ? '1px solid #f0f0f0' : 'none',
+                }}>
+                  <span style={{
+                    fontSize: '11px', fontWeight: '700', color: '#22c55e',
+                    letterSpacing: '0.1em', flexShrink: 0, paddingTop: '3px',
+                    fontVariantNumeric: 'tabular-nums',
+                  }}>{n}</span>
+                  <div>
+                    <h4 style={{
+                      fontSize: '16px', fontWeight: '700', color: '#0f172a',
+                      marginBottom: '8px', letterSpacing: '-0.02em', lineHeight: '1.3',
+                    }}>{title}</h4>
+                    <p style={{ fontSize: '14px', color: '#6b7280', lineHeight: '1.7', margin: 0 }}>{body}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </motion.div>
+              ))}
+            </motion.div>
+
+          </div>
         </div>
       </section>
 
