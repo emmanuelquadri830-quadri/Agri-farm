@@ -93,32 +93,6 @@ export default function Footer() {
           textAlign: 'center',
         }}>
 
-          {/* Eyebrow */}
-          <div style={{
-            display: 'inline-flex', alignItems: 'center', gap: '8px',
-            background: 'rgba(74,222,128,0.1)',
-            border: '1px solid rgba(74,222,128,0.3)',
-            borderRadius: '999px',
-            padding: '6px 16px',
-            marginBottom: '32px',
-            backdropFilter: 'blur(8px)',
-          }}>
-            <span style={{
-              display: 'inline-block',
-              width: '5px', height: '5px',
-              borderRadius: '50%',
-              background: '#4ade80',
-              flexShrink: 0,
-            }} />
-            <span style={{
-              fontSize: '11px', fontWeight: '600',
-              letterSpacing: '0.14em', textTransform: 'uppercase',
-              color: '#4ade80', fontFamily: 'Inter, sans-serif',
-            }}>
-              Built for farmers
-            </span>
-          </div>
-
           {/* Headline */}
           <h2 style={{
             fontFamily: 'Inter, sans-serif',
